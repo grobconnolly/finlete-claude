@@ -90,16 +90,18 @@
 }
 
 :root {
-  --finlete-green: #32cd32;
-  --finlete-green-dark: #37ba39;
-  --finlete-green-soft: rgba(69, 205, 71, 0.18);
-  --finlete-ink: #0a0a0a;
-  --finlete-ink-2: #111827;
+  /* Real brand palette, sampled from the live finlete.com via DOM inspection. */
+  --finlete-green: #44a647;         /* primary — kelly green, NOT lime */
+  --finlete-green-dark: #388b3e;    /* hover / darker */
+  --finlete-green-light: #3cbd41;   /* lighter accent */
+  --finlete-green-soft: rgba(68, 166, 71, 0.18);
+  --finlete-ink: #111111;           /* site bg — real live value */
+  --finlete-ink-2: #0a0a0a;
   --finlete-muted: #6b7280;
 
   /* Override Bootstrap theme primitives via CSS variables (no Sass needed). */
   --bs-primary: var(--finlete-green);
-  --bs-primary-rgb: 50, 205, 50;
+  --bs-primary-rgb: 68, 166, 71;
   --bs-link-color: var(--finlete-green-dark);
   --bs-link-hover-color: var(--finlete-ink);
   --bs-body-font-family: "Inter Local", "Inter", system-ui, -apple-system,
@@ -156,6 +158,12 @@ body {
 .navbar-finlete .navbar-brand img {
   height: 26px;
   width: auto;
+}
+
+.nav-f-icon {
+  height: 26px;
+  width: auto;
+  display: block;
 }
 
 .navbar-finlete .nav-link {
@@ -217,7 +225,7 @@ body {
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(69, 205, 71, 0.35);
+  border: 1px solid rgba(68, 166, 71, 0.35);
 }
 
 /* Metrics strip */
@@ -464,7 +472,7 @@ body {
 
 .accordion-button:focus {
   border-color: var(--finlete-green);
-  box-shadow: 0 0 0 0.18rem rgba(50, 205, 50, 0.2);
+  box-shadow: 0 0 0 0.18rem rgba(68, 166, 71, 0.2);
 }
 
 .accordion-item {
@@ -476,6 +484,55 @@ body {
   background: var(--finlete-ink);
   color: #c8c8c8;
   padding: 4rem 0 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 240px;
+  height: 240px;
+  background-image: radial-gradient(circle, rgba(68, 166, 71, 0.18) 1.5px, transparent 2px);
+  background-size: 14px 14px;
+  mask-image: radial-gradient(ellipse at bottom left, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at bottom left, black 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer-f-icon {
+  height: 38px;
+  width: auto;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.footer-tagline {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 18rem;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+  margin: 3rem 0 1.25rem;
+}
+
+.site-footer .social-icons a {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 36px;
+  height: 36px;
+}
+
+.site-footer .social-icons a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
 }
 
 .site-footer h6 {
@@ -495,8 +552,10 @@ body {
   color: var(--finlete-green);
 }
 
+.site-footer .footer-brand img.nav-f-icon,
 .site-footer .footer-brand img {
   height: 36px;
+  width: auto;
   margin-bottom: 1.25rem;
 }
 
@@ -563,7 +622,7 @@ body {
   right: -10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(50, 205, 50, 0.18) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(68, 166, 71, 0.18) 0%, transparent 60%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -571,7 +630,7 @@ body {
 /* Athlete profile hero */
 .profile-hero {
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(50, 205, 50, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 0%, rgba(68, 166, 71, 0.16) 0%, transparent 55%),
     linear-gradient(180deg, #0a0a0a 0%, #060606 100%);
   color: #fff;
   padding: 4.5rem 0 5rem;
@@ -584,7 +643,7 @@ body {
   line-height: 1;
   letter-spacing: -0.025em;
   font-weight: 800;
-  text-shadow: 0 2px 30px rgba(50, 205, 50, 0.25);
+  text-shadow: 0 2px 30px rgba(68, 166, 71, 0.25);
 }
 
 .profile-hero .profile-tagline {
@@ -694,7 +753,7 @@ body {
 
 .filings-strip a:hover {
   color: var(--finlete-green);
-  background: rgba(50, 205, 50, 0.08);
+  background: rgba(68, 166, 71, 0.08);
 }
 
 .filings-strip .bi {
@@ -704,7 +763,7 @@ body {
 /* Right column info card + live feed */
 .info-card {
   background:
-    radial-gradient(circle at 95% 10%, rgba(50, 205, 50, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 95% 10%, rgba(68, 166, 71, 0.22) 0%, transparent 45%),
     #0f0f0f;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 18px;
@@ -752,7 +811,7 @@ body {
 }
 
 .btn-invest {
-  background: #d4a82c;
+  background: #d4a72c;
   color: #111;
   font-weight: 700;
   padding: 0.85rem 1.4rem;
@@ -895,7 +954,7 @@ body {
 
 .bio-card {
   background:
-    radial-gradient(circle at 95% 10%, rgba(50, 205, 50, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 95% 10%, rgba(68, 166, 71, 0.12) 0%, transparent 45%),
     #0f0f0f;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 14px;
@@ -950,7 +1009,7 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: rgba(50, 205, 50, 0.2);
+  background: rgba(68, 166, 71, 0.2);
   border: 2px solid var(--finlete-green);
   flex-shrink: 0;
 }
@@ -1016,7 +1075,7 @@ body {
 }
 
 .follow-cta {
-  background: linear-gradient(120deg, #2bb82b 0%, #32cd32 60%, #37ba39 100%);
+  background: linear-gradient(120deg, #388b3e 0%, #44a647 60%, #3cbd41 100%);
   border-radius: 14px;
   padding: 1.25rem 1.5rem;
   color: #fff;
@@ -1061,7 +1120,7 @@ body {
 }
 
 .btn-make-investment {
-  background: #d4a82c;
+  background: #d4a72c;
   color: #111;
   font-weight: 700;
   padding: 1rem 2.2rem;
@@ -1204,7 +1263,7 @@ body {
 }
 
 .calc-result-panel {
-  background: linear-gradient(160deg, #2bb82b 0%, #32cd32 50%, #37ba39 100%);
+  background: linear-gradient(160deg, #388b3e 0%, #44a647 50%, #3cbd41 100%);
   border-radius: 16px;
   padding: 2.75rem 2rem;
   color: #fff;
