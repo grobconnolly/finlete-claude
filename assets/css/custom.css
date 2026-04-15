@@ -8,6 +8,87 @@
      #0a0a0a (near-black surfaces)
    ========================================================= */
 
+/* Real brand faces (Archivo SemiExpanded + Inter), self-hosted from
+   the legacy Next.js repo. Google Fonts does not carry SemiExpanded. */
+@font-face {
+  font-family: "Archivo SE";
+  src: url("../fonts/titles/Archivo_SemiExpanded-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo SE";
+  src: url("../fonts/titles/Archivo_SemiExpanded-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo SE";
+  src: url("../fonts/titles/Archivo_SemiExpanded-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo SE";
+  src: url("../fonts/titles/Archivo_SemiExpanded-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo SE";
+  src: url("../fonts/titles/Archivo_SemiExpanded-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo SE";
+  src: url("../fonts/titles/Archivo_SemiExpanded-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("../fonts/body/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Local";
+  src: url("../fonts/body/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Local";
+  src: url("../fonts/body/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Local";
+  src: url("../fonts/body/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Local";
+  src: url("../fonts/body/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --finlete-green: #32cd32;
   --finlete-green-dark: #37ba39;
@@ -21,17 +102,16 @@
   --bs-primary-rgb: 50, 205, 50;
   --bs-link-color: var(--finlete-green-dark);
   --bs-link-hover-color: var(--finlete-ink);
-  --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  --bs-body-font-family: "Inter Local", "Inter", system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Headings use Archivo — the closest Google font match to Archivo SemiExpanded,
-   which was the legacy title face. */
+/* Headings use real Archivo SemiExpanded (self-hosted). */
 h1, h2, h3, h4, h5, h6,
 .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
-  font-family: "Archivo", "Inter", system-ui, sans-serif;
+  font-family: "Archivo SE", "Archivo", "Inter Local", system-ui, sans-serif;
   font-weight: 800;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
 }
 
 body {
@@ -67,26 +147,42 @@ body {
 
 /* Navbar — dark surface on home, translucent-over-hero handled per-page */
 .navbar-finlete {
-  background: var(--finlete-ink);
-  padding-top: 0.85rem;
-  padding-bottom: 0.85rem;
+  background: #000;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar-finlete .navbar-brand img {
-  height: 28px;
+  height: 26px;
   width: auto;
 }
 
 .navbar-finlete .nav-link {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
   font-weight: 500;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
+  font-size: 0.95rem;
 }
 
 .navbar-finlete .nav-link:hover,
 .navbar-finlete .nav-link.active {
   color: var(--finlete-green);
+}
+
+.nav-signin {
+  background: #fff;
+  color: #111 !important;
+  padding: 0.45rem 1.1rem !important;
+  border-radius: 8px;
+  font-weight: 600 !important;
+  margin-left: 0.5rem;
+}
+
+.nav-signin:hover {
+  background: #f3f4f6;
+  color: #111 !important;
 }
 
 /* Hero */
@@ -133,7 +229,7 @@ body {
 }
 
 .metric-card .metric-value {
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo SE", "Archivo", sans-serif;
   font-weight: 800;
   font-size: clamp(2rem, 3.5vw, 3rem);
   color: var(--finlete-ink);
@@ -178,7 +274,10 @@ body {
 }
 
 .section-title {
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
   margin-bottom: 0.75rem;
 }
 
@@ -480,18 +579,21 @@ body {
 }
 
 .profile-hero h1 {
-  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-size: clamp(3rem, 7.5vw, 5.5rem);
   color: var(--finlete-green);
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+  text-shadow: 0 2px 30px rgba(50, 205, 50, 0.25);
 }
 
 .profile-hero .profile-tagline {
   color: #fff;
-  font-size: clamp(1.2rem, 2.3vw, 1.75rem);
-  font-weight: 600;
-  margin-top: 1rem;
+  font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+  font-weight: 700;
+  margin-top: 1.1rem;
   margin-bottom: 3rem;
+  letter-spacing: -0.01em;
 }
 
 .profile-hero .profile-img {
@@ -544,7 +646,7 @@ body {
 }
 
 .profile-raised .raised-amount {
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo SE", "Archivo", sans-serif;
   font-size: 1.85rem;
   font-weight: 800;
   color: #fff;
@@ -650,8 +752,8 @@ body {
 }
 
 .btn-invest {
-  background: #d4a017;
-  color: #000;
+  background: #d4a82c;
+  color: #111;
   font-weight: 700;
   padding: 0.85rem 1.4rem;
   border: 0;
@@ -663,8 +765,8 @@ body {
 }
 
 .btn-invest:hover {
-  background: #e0b02a;
-  color: #000;
+  background: #e6bd40;
+  color: #111;
 }
 
 .btn-bell {
@@ -696,7 +798,7 @@ body {
 
 .live-feed-header .feed-total {
   color: #fff;
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo SE", "Archivo", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
 }
@@ -730,12 +832,18 @@ body {
 .term-card {
   background: #fff;
   border-radius: 14px;
-  padding: 1.5rem 1.6rem;
+  padding: 1.75rem 1.85rem;
   height: 100%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.term-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .term-card .term-label {
@@ -749,7 +857,7 @@ body {
 
 .term-card .term-value {
   color: var(--finlete-green-dark);
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo SE", "Archivo", sans-serif;
   font-weight: 800;
   font-size: clamp(1.65rem, 3vw, 2.1rem);
   line-height: 1.1;
@@ -764,11 +872,12 @@ body {
 /* Meet [Athlete] section */
 .meet-title {
   color: #fff;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
   font-weight: 800;
   text-align: center;
   margin-bottom: 3rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
 }
 
 .athlete-portrait {
@@ -952,8 +1061,8 @@ body {
 }
 
 .btn-make-investment {
-  background: #d4a017;
-  color: #000;
+  background: #d4a82c;
+  color: #111;
   font-weight: 700;
   padding: 1rem 2.2rem;
   border: 0;
@@ -966,8 +1075,8 @@ body {
 }
 
 .btn-make-investment:hover {
-  background: #e0b02a;
-  color: #000;
+  background: #e6bd40;
+  color: #111;
 }
 
 .stat-tile {
@@ -979,7 +1088,7 @@ body {
 }
 
 .stat-tile .stat-value {
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo SE", "Archivo", sans-serif;
   font-weight: 800;
   font-size: 1.6rem;
   color: var(--finlete-ink);
@@ -1119,7 +1228,7 @@ body {
 }
 
 .calc-result-value {
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo SE", "Archivo", sans-serif;
   font-weight: 800;
   font-size: clamp(2.5rem, 5.5vw, 4rem);
   line-height: 1;
@@ -1146,7 +1255,7 @@ body {
 }
 
 .calc-stat-val {
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo SE", "Archivo", sans-serif;
   font-weight: 800;
   font-size: clamp(1.4rem, 2.2vw, 1.75rem);
   line-height: 1;
