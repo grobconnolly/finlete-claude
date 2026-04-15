@@ -90,18 +90,31 @@
 }
 
 :root {
-  /* Real brand palette, sampled from the live finlete.com via DOM inspection. */
-  --finlete-green: #44a647;         /* primary — kelly green, NOT lime */
-  --finlete-green-dark: #388b3e;    /* hover / darker */
-  --finlete-green-light: #3cbd41;   /* lighter accent */
-  --finlete-green-soft: rgba(68, 166, 71, 0.18);
-  --finlete-ink: #111111;           /* site bg — real live value */
-  --finlete-ink-2: #0a0a0a;
-  --finlete-muted: #6b7280;
+  /* Figma design-system tokens from Finlete re-design 2026. */
+  --finlete-green: #36a93e;         /* color/buttons/default + bg-primary/strong */
+  --finlete-green-dark: #237229;    /* bg-primary/strongest */
+  --finlete-green-light: #5eca65;   /* bg-primary/default */
+  --finlete-green-soft: #c3efc5;    /* bg-primary/medium */
+  --finlete-green-subtle: rgba(54, 169, 62, 0.12);
+  --finlete-success: #22c55e;       /* bg-status/success/default */
+  --finlete-success-soft: #f0fdf4;  /* bg-status/success/soft */
+  --finlete-ink: #0c0a09;           /* text-neutral/strong */
+  --finlete-ink-2: #121212;         /* black/900 */
+  --finlete-ink-3: #262626;         /* text-neutral/default + bg-neutral/ultra-strong */
+  --finlete-muted: #737373;         /* text-neutral/soft */
+  --finlete-bg-weak: #ffffff;
+  --finlete-bg-soft: #fafafa;       /* bg-neutral/soft */
+  --finlete-bg-medium: #f5f5f5;     /* bg-neutral/medium */
+  --finlete-bg-default: #e5e5e5;    /* bg-neutral/default */
+  --finlete-bg-strong: #d4d4d4;     /* bg-neutral/strong */
+  --finlete-border-soft: #e5e5e5;
+  --finlete-border-default: #a3a3a3;
+  --finlete-shadow-s: 0 4px 8px rgba(34, 48, 60, 0.08);
+  --finlete-shadow-m: 0 4px 12px rgba(34, 48, 60, 0.16);
 
   /* Override Bootstrap theme primitives via CSS variables (no Sass needed). */
   --bs-primary: var(--finlete-green);
-  --bs-primary-rgb: 68, 166, 71;
+  --bs-primary-rgb: 54, 169, 62;
   --bs-link-color: var(--finlete-green-dark);
   --bs-link-hover-color: var(--finlete-ink);
   --bs-body-font-family: "Inter Local", "Inter", system-ui, -apple-system,
@@ -211,7 +224,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(circle, rgba(68, 166, 71, 0.25) 1.5px, transparent 2px);
+  background-image: radial-gradient(circle, rgba(54, 169, 62, 0.25) 1.5px, transparent 2px);
   background-size: 18px 18px;
   mask-image: radial-gradient(ellipse at 20% 40%, black 0%, transparent 65%);
   -webkit-mask-image: radial-gradient(ellipse at 20% 40%, black 0%, transparent 65%);
@@ -248,7 +261,7 @@ body {
   font-size: 0.88rem;
   border-radius: 999px;
   margin-bottom: 2.25rem;
-  border: 1px solid rgba(68, 166, 71, 0.55);
+  border: 1px solid rgba(54, 169, 62, 0.55);
   overflow: hidden;
 }
 
@@ -281,7 +294,7 @@ body {
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(68, 166, 71, 0.35);
+  border: 1px solid rgba(54, 169, 62, 0.35);
 }
 
 .hero-video {
@@ -301,8 +314,8 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 30% 30%, rgba(68, 166, 71, 0.25), transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(68, 166, 71, 0.12), transparent 55%);
+    radial-gradient(circle at 30% 30%, rgba(54, 169, 62, 0.25), transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(54, 169, 62, 0.12), transparent 55%);
   pointer-events: none;
 }
 
@@ -318,7 +331,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.9rem;
-  box-shadow: 0 10px 36px rgba(68, 166, 71, 0.5);
+  box-shadow: 0 10px 36px rgba(54, 169, 62, 0.5);
   text-decoration: none;
   border: 0;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -326,7 +339,7 @@ body {
 
 .hero-video .play-button:hover {
   transform: scale(1.06);
-  box-shadow: 0 12px 44px rgba(68, 166, 71, 0.65);
+  box-shadow: 0 12px 44px rgba(54, 169, 62, 0.65);
 }
 
 /* Dark metrics strip */
@@ -821,7 +834,7 @@ body {
 
 .accordion-button:focus {
   border-color: var(--finlete-green);
-  box-shadow: 0 0 0 0.18rem rgba(68, 166, 71, 0.2);
+  box-shadow: 0 0 0 0.18rem rgba(54, 169, 62, 0.2);
 }
 
 .accordion-item {
@@ -844,7 +857,7 @@ body {
   left: 0;
   width: 240px;
   height: 240px;
-  background-image: radial-gradient(circle, rgba(68, 166, 71, 0.18) 1.5px, transparent 2px);
+  background-image: radial-gradient(circle, rgba(54, 169, 62, 0.18) 1.5px, transparent 2px);
   background-size: 14px 14px;
   mask-image: radial-gradient(ellipse at bottom left, black 0%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse at bottom left, black 0%, transparent 70%);
@@ -954,6 +967,734 @@ body {
   margin-right: 0.75rem;
 }
 
+/* =========================================================
+   New components for the Figma redesign (Padilla page)
+   ========================================================= */
+
+/* Promo bar */
+.promo-bar {
+  background: var(--finlete-green);
+  color: #fff;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+}
+
+/* Hero — redesigned profile hero */
+.p-hero {
+  background: #fff;
+  color: var(--finlete-ink);
+  padding: 4rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-hero .p-hero-name {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--finlete-ink);
+  margin-bottom: 1.25rem;
+}
+
+.p-hero .p-hero-meta {
+  color: var(--finlete-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.p-hero .p-hero-meta span + span::before {
+  content: "·";
+  margin: 0 0.55rem;
+  color: var(--finlete-border-default);
+}
+
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--finlete-bg-medium);
+  color: var(--finlete-ink);
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin: 0 0.5rem 0.6rem 0;
+}
+
+.stat-chip .bi {
+  color: var(--finlete-green);
+  font-size: 1rem;
+}
+
+.industry-insight {
+  background: var(--finlete-success-soft);
+  border: 1px solid rgba(54, 169, 62, 0.25);
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.industry-insight .ii-eyebrow {
+  color: var(--finlete-green-dark);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.industry-insight .ii-quote {
+  color: var(--finlete-ink);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin-bottom: 0.55rem;
+}
+
+.industry-insight .ii-attribution {
+  color: var(--finlete-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.p-hero-portrait {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--finlete-bg-medium);
+  position: relative;
+}
+
+.p-hero-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Raise progress bar */
+.raise-strip {
+  background: #fff;
+  border-top: 1px solid var(--finlete-border-soft);
+  border-bottom: 1px solid var(--finlete-border-soft);
+  padding: 1.25rem 0;
+}
+
+.raise-strip .raise-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--finlete-bg-medium);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.raise-strip .raise-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.raise-strip .raise-figure {
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--finlete-ink);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.raise-strip .raise-meta {
+  color: var(--finlete-muted);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.raise-strip .raise-progress {
+  height: 6px;
+  background: var(--finlete-bg-default);
+  border-radius: 999px;
+  overflow: hidden;
+  flex: 1;
+  max-width: 520px;
+}
+
+.raise-strip .raise-progress-bar {
+  height: 100%;
+  background: var(--finlete-green);
+  border-radius: 999px;
+}
+
+.btn-invest-primary {
+  background: var(--finlete-green);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  transition: background 0.15s ease;
+}
+
+.btn-invest-primary:hover {
+  background: var(--finlete-green-dark);
+  color: #fff;
+}
+
+.btn-icon-round {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--finlete-bg-medium);
+  color: var(--finlete-ink);
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-icon-round:hover { background: var(--finlete-bg-default); color: var(--finlete-ink); }
+
+/* Section foundation — light surfaces use these */
+.section-light {
+  background: #fff;
+  padding: 5rem 0;
+}
+
+.section-soft {
+  background: var(--finlete-bg-soft);
+  padding: 5rem 0;
+}
+
+.section-dark-2 {
+  background: var(--finlete-ink-2);
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.p-eyebrow {
+  color: var(--finlete-green);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+
+.p-section-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--finlete-ink);
+  margin-bottom: 0.85rem;
+}
+
+.section-dark-2 .p-section-title { color: #fff; }
+
+.p-section-sub {
+  color: var(--finlete-muted);
+  font-size: 1.1rem;
+  line-height: 1.55;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* How it works — redesigned 3-card stepper */
+.hiw-card {
+  background: #fff;
+  border: 1px solid var(--finlete-border-soft);
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: var(--finlete-shadow-s);
+  position: relative;
+}
+
+.hiw-card .hiw-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--finlete-green-soft);
+  color: var(--finlete-green-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hiw-card h3 {
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--finlete-ink);
+  letter-spacing: -0.01em;
+}
+
+.hiw-card p {
+  color: var(--finlete-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.hiw-step-num {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--finlete-green);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  font-family: "Archivo", sans-serif;
+}
+
+.hiw-footer {
+  background: var(--finlete-bg-medium);
+  border-radius: 20px;
+  padding: 2.25rem;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.hiw-footer .hiw-footer-col .bi {
+  color: var(--finlete-green);
+  font-size: 1.4rem;
+  margin-bottom: 0.65rem;
+}
+
+.hiw-footer h4 {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.55rem;
+  color: var(--finlete-ink);
+}
+
+.hiw-footer p {
+  color: var(--finlete-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .hiw-footer { grid-template-columns: 1fr; }
+}
+
+/* Meet the athlete (redesigned 3-col) */
+.meet-3col {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.meet-fact-row {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--finlete-border-soft);
+}
+
+.meet-fact-row:first-child { padding-top: 0; }
+
+.meet-fact-row .mfr-label {
+  color: var(--finlete-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.meet-fact-row .mfr-value {
+  color: var(--finlete-ink);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.meet-portrait {
+  background: var(--finlete-bg-medium);
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.meet-portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 991px) {
+  .meet-3col { grid-template-columns: 1fr; }
+}
+
+/* Stats table redesigned for light surface */
+.stats-panel-light {
+  background: var(--finlete-bg-medium);
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  color: var(--finlete-ink);
+  margin-bottom: 1.5rem;
+}
+
+.stats-panel-light .stats-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 800;
+  color: var(--finlete-ink);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.stats-panel-light .stats-title::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--finlete-green-soft);
+  border: 2px solid var(--finlete-green);
+  flex-shrink: 0;
+}
+
+.stats-table-light {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--finlete-ink);
+  font-size: 0.95rem;
+}
+
+.stats-table-light thead th {
+  background: #fff;
+  color: var(--finlete-muted);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.55rem 0.5rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.stats-table-light tbody td {
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Archivo", sans-serif;
+  background: #fff;
+  border-top: 1px solid var(--finlete-border-soft);
+}
+
+.stats-table-light thead th:first-child { border-top-left-radius: 8px; }
+.stats-table-light thead th:last-child { border-top-right-radius: 8px; }
+.stats-table-light tbody tr:last-child td:first-child { border-bottom-left-radius: 8px; }
+.stats-table-light tbody tr:last-child td:last-child { border-bottom-right-radius: 8px; }
+
+/* Why raising capital - redesign */
+.why-capital-redesigned {
+  background: #fff;
+  border: 1px solid var(--finlete-border-soft);
+  border-radius: 20px;
+  padding: 2.5rem 2.75rem;
+  color: var(--finlete-ink);
+  box-shadow: var(--finlete-shadow-s);
+  max-width: 880px;
+  margin: 3rem auto 0;
+}
+
+.why-capital-redesigned h3 {
+  font-weight: 800;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.why-capital-redesigned h3 .accent { color: var(--finlete-green); }
+
+.why-capital-redesigned p {
+  color: var(--finlete-ink-3);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1.02rem;
+}
+
+.why-capital-redesigned .signature {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  color: var(--finlete-ink);
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+
+/* Athlete Spotlight — video gallery + tweet wall */
+.video-thumb {
+  background: var(--finlete-ink-2);
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.video-thumb .play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.tweet-card {
+  background: #fff;
+  border: 1px solid var(--finlete-border-soft);
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--finlete-shadow-s);
+  color: var(--finlete-ink);
+}
+
+.tweet-card .tc-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.tweet-card .tc-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--finlete-bg-medium);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--finlete-muted);
+  font-weight: 700;
+}
+
+.tweet-card .tc-name {
+  font-weight: 700;
+  color: var(--finlete-ink);
+  font-size: 0.95rem;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tweet-card .tc-name .bi-patch-check-fill {
+  color: #1d9bf0;
+  font-size: 0.95rem;
+}
+
+.tweet-card .tc-handle {
+  color: var(--finlete-muted);
+  font-size: 0.85rem;
+}
+
+.tweet-card .tc-body {
+  color: var(--finlete-ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+.tweet-card .tc-footer {
+  color: var(--finlete-muted);
+  font-size: 0.8rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.tweet-card .tc-footer .bi { margin-right: 0.25rem; }
+
+/* Investor perks redesigned */
+.perk-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.perk-card {
+  background: #fff;
+  border: 1px solid var(--finlete-border-soft);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  text-align: left;
+  box-shadow: var(--finlete-shadow-s);
+  height: 100%;
+}
+
+.perk-card .perk-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--finlete-green-soft);
+  color: var(--finlete-green-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.perk-card h3 {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+  color: var(--finlete-ink);
+  letter-spacing: -0.01em;
+}
+
+.perk-card .perk-tier {
+  color: var(--finlete-green);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.perk-card p {
+  color: var(--finlete-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .perk-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 575px) {
+  .perk-cards { grid-template-columns: 1fr; }
+}
+
+/* FAQ on athlete page */
+.p-faq .accordion-item {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--finlete-border-soft);
+  border-radius: 0 !important;
+}
+
+.p-faq .accordion-button {
+  background: transparent;
+  color: var(--finlete-ink);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 1.4rem 0;
+  box-shadow: none;
+}
+
+.p-faq .accordion-button:not(.collapsed) {
+  background: transparent;
+  color: var(--finlete-green-dark);
+}
+
+.p-faq .accordion-body {
+  color: var(--finlete-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  padding: 0 0 1.4rem 0;
+}
+
+/* Join the discussion — comment form */
+.discussion-wrap {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.discussion-form .form-label {
+  font-weight: 600;
+  color: var(--finlete-ink);
+  font-size: 0.9rem;
+}
+
+.discussion-form .form-control,
+.discussion-form .form-select {
+  border: 1px solid var(--finlete-border-soft);
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  background: #fff;
+  color: var(--finlete-ink);
+}
+
+.discussion-form .form-control:focus,
+.discussion-form .form-select:focus {
+  border-color: var(--finlete-green);
+  box-shadow: 0 0 0 0.18rem rgba(54, 169, 62, 0.2);
+}
+
+.empty-comments {
+  background: var(--finlete-bg-soft);
+  border: 1px dashed var(--finlete-border-default);
+  border-radius: 16px;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--finlete-muted);
+}
+
+@media (max-width: 767px) {
+  .discussion-wrap { grid-template-columns: 1fr; }
+}
+
+/* Bottom "Invest in X's Career" CTA band */
+.career-cta-band {
+  background: var(--finlete-ink-2);
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.career-cta-band h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.career-cta-band .career-cta-row {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Terms cards — text refined for new tokens */
+.term-card .term-value { color: var(--finlete-green-dark); }
+
 /* Final green CTA band */
 .final-cta-section {
   background: linear-gradient(160deg, #44a647 0%, #388b3e 100%);
@@ -1010,7 +1751,7 @@ body {
   right: -10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(68, 166, 71, 0.18) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(54, 169, 62, 0.18) 0%, transparent 60%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1018,7 +1759,7 @@ body {
 /* Athlete profile hero */
 .profile-hero {
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(68, 166, 71, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 0%, rgba(54, 169, 62, 0.16) 0%, transparent 55%),
     linear-gradient(180deg, #0a0a0a 0%, #060606 100%);
   color: #fff;
   padding: 4.5rem 0 5rem;
@@ -1031,7 +1772,7 @@ body {
   line-height: 1;
   letter-spacing: -0.025em;
   font-weight: 800;
-  text-shadow: 0 2px 30px rgba(68, 166, 71, 0.25);
+  text-shadow: 0 2px 30px rgba(54, 169, 62, 0.25);
 }
 
 .profile-hero .profile-tagline {
@@ -1141,7 +1882,7 @@ body {
 
 .filings-strip a:hover {
   color: var(--finlete-green);
-  background: rgba(68, 166, 71, 0.08);
+  background: rgba(54, 169, 62, 0.08);
 }
 
 .filings-strip .bi {
@@ -1151,7 +1892,7 @@ body {
 /* Right column info card + live feed */
 .info-card {
   background:
-    radial-gradient(circle at 95% 10%, rgba(68, 166, 71, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 95% 10%, rgba(54, 169, 62, 0.22) 0%, transparent 45%),
     #0f0f0f;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 18px;
@@ -1342,7 +2083,7 @@ body {
 
 .bio-card {
   background:
-    radial-gradient(circle at 95% 10%, rgba(68, 166, 71, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 95% 10%, rgba(54, 169, 62, 0.12) 0%, transparent 45%),
     #0f0f0f;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 14px;
@@ -1397,7 +2138,7 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: rgba(68, 166, 71, 0.2);
+  background: rgba(54, 169, 62, 0.2);
   border: 2px solid var(--finlete-green);
   flex-shrink: 0;
 }
