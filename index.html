@@ -14,11 +14,9 @@
   </head>
   <body>
     <!-- ========== NAVBAR ========== -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-finlete sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-finlete sticky-top">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="assets/img/finlete-f.svg" alt="Finlete" class="nav-f-icon" />
-        </a>
+        <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="assets/img/finlete-f.svg" alt="Finlete" class="nav-f-icon" /><span class="navbar-brand-text ms-2">FINLETE</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,70 +33,71 @@
       </div>
     </nav>
 
-    <!-- ========== 1. HERO ========== -->
-    <header class="hero">
+    <!-- ========== 1. HERO (editorial, light) ========== -->
+    <header class="hero-light">
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
-            <a href="athletes/santos.html" class="announcement-pill text-decoration-none">
-              <span class="pill-tag">NEW</span>
-              <span class="pill-text">Santos promoted to AAA</span>
-            </a>
+            <span class="active-users-pill">
+              <span class="au-dot"></span>
+              <span class="au-avatars">
+                <span class="au-avatar">A</span>
+                <span class="au-avatar">M</span>
+                <span class="au-avatar">R</span>
+              </span>
+              <span>Active Users</span>
+            </span>
             <h1>
-              Invest in the<br />career of a<br /><span class="rotate">prospect</span>
+              Invest in the careers of<br />
+              <span class="accent">top MLB prospects.</span><br />
+              Earn as they do.
             </h1>
-            <p class="lead">
-              Back a rising MLB prospect from $300. If he makes the big leagues, you earn a fixed share of his future salary — it's that simple.
+            <p class="hero-sub">
+              Pick a prospect. Buy shares through an SEC registered broker dealer. If they sign an MLB contract, you earn a fixed percentage of their salary.
             </p>
-            <div class="d-flex flex-wrap gap-3 mt-4">
-              <a class="btn-make-investment" href="athletes.html">View athletes <i class="bi bi-arrow-right ms-2"></i></a>
+            <div class="hero-subhead">Structured athlete agreements.</div>
+            <div class="hero-subcopy">No loans. No equity. Transparent income-share agreements.</div>
+            <a class="btn-dark-pill" href="athletes.html">Browse Live Offerings</a>
+            <div class="hero-check-list">
+              <div class="check-item"><span class="check-dot"><i class="bi bi-check"></i></span>SEC-registered broker-dealer</div>
+              <div class="check-item"><span class="check-dot"><i class="bi bi-check"></i></span>Regulation CF offerings</div>
+              <div class="check-item"><span class="check-dot"><i class="bi bi-check"></i></span>Clear, upfront, standardized terms</div>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="hero-video">
-              <a href="#video" class="play-button" aria-label="Watch the Finlete story">
-                <i class="bi bi-play-fill"></i>
-              </a>
+            <div class="hero-athlete-stage">
+              <img class="athlete-photo" src="https://placehold.co/800x800/e5e5e5/737373?text=Yairo+Padilla" alt="Yairo Padilla" />
+              <div class="hero-athlete-chips">
+                <span class="hero-chip"><span class="chip-dot"></span>90 percentile EV (2025)</span>
+                <span class="hero-chip"><span class="chip-dot"></span>24 SB in 120 AB (2025)</span>
+                <span class="hero-chip"><span class="chip-dot"></span>.396 OBP (2025)</span>
+              </div>
+              <div class="hero-elite-card">
+                <div class="elite-label">Elite Athlete</div>
+                <div class="elite-name">Yairo<br />Padilla</div>
+                <div class="elite-meta">St. Louis Cardinals · SS · Rookie</div>
+                <div class="elite-panel">Has been compared to <strong>Elly De La Cruz</strong> and <strong>Fernando Tatis Jr.</strong></div>
+              </div>
+              <div class="hero-carousel-controls">
+                <button type="button" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+                <button type="button" class="active" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Metrics band inside the hero section (light, inline) -->
+        <div class="metric-band-editorial">
+          <div class="mb-icon"><img src="assets/img/finlete-f.svg" alt="" /></div>
+          <div class="mb-item"><div class="mb-value">$815,000</div><div class="mb-label">Raised for athletes</div></div>
+          <div class="mb-item"><div class="mb-value">992</div><div class="mb-label">Fan investments</div></div>
+          <div class="mb-item"><div class="mb-value">$1,157</div><div class="mb-label">Average investment</div></div>
+          <div class="mb-item"><div class="mb-value">23%</div><div class="mb-label">Repeat investment rate</div></div>
+          <div class="mb-item"><div class="mb-value">13</div><div class="mb-label">Athletes</div></div>
+          <div class="mb-item"><div class="mb-value">$300</div><div class="mb-label">Minimum investment</div></div>
+        </div>
       </div>
     </header>
-
-    <!-- ========== 2. METRICS STRIP ========== -->
-    <section class="metric-strip">
-      <div class="container">
-        <div class="row g-4 text-center">
-          <div class="col-md-4">
-            <div class="metric-value">1,016</div>
-            <div class="metric-label">Active investments</div>
-          </div>
-          <div class="col-md-4">
-            <div class="metric-value">13</div>
-            <div class="metric-label">Athletes signed</div>
-          </div>
-          <div class="col-md-4">
-            <div class="metric-value">$833K</div>
-            <div class="metric-label">Raised for athletes</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PRESS LOGOS ========== -->
-    <section class="press-strip">
-      <div class="container">
-        <div class="press-label">As seen in</div>
-        <div class="row align-items-center justify-content-center g-4 flex-wrap">
-          <div class="col-6 col-md-3 col-lg-2 text-center"><img src="assets/img/clients/yahoo-finance.png" alt="Yahoo Finance" /></div>
-          <div class="col-6 col-md-3 col-lg-2 text-center"><img src="assets/img/clients/la-times.png" alt="Los Angeles Times" /></div>
-          <div class="col-6 col-md-3 col-lg-2 text-center"><img src="assets/img/clients/sportico.png" alt="Sportico" /></div>
-          <div class="col-6 col-md-3 col-lg-2 text-center"><img src="assets/img/clients/sbj.png" alt="Sports Business Journal" /></div>
-          <div class="col-6 col-md-3 col-lg-2 text-center"><img src="assets/img/clients/fort-worth-star-telegram.png" alt="Fort Worth Star-Telegram" /></div>
-          <div class="col-6 col-md-3 col-lg-2 text-center"><img src="assets/img/clients/san-diego-business-journal.png" alt="San Diego Business Journal" /></div>
-        </div>
-      </div>
-    </section>
 
     <!-- ========== 3. HOW IT WORKS ========== -->
     <section class="section" id="how-it-works">
