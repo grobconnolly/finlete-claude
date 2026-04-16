@@ -45,9 +45,9 @@
             <span class="active-users-pill">
               <span class="au-dot"></span>
               <span class="au-avatars">
-                <span class="au-avatar">A</span>
-                <span class="au-avatar">M</span>
-                <span class="au-avatar">R</span>
+                <span class="au-avatar"><img src="assets/img/athletes/hero-1.png" alt="" /></span>
+                <span class="au-avatar"><img src="assets/img/athletes/hero-2.png" alt="" /></span>
+                <span class="au-avatar"><img src="assets/img/athletes/hero-5.png" alt="" /></span>
               </span>
               <span>Active Users</span>
             </span>
@@ -69,22 +69,23 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="hero-athlete-stage">
-              <img class="athlete-photo" src="https://placehold.co/800x800/e5e5e5/737373?text=Yairo+Padilla" alt="Yairo Padilla" />
-              <div class="hero-athlete-chips">
-                <span class="hero-chip"><span class="chip-dot"></span>90 percentile EV (2025)</span>
-                <span class="hero-chip"><span class="chip-dot"></span>24 SB in 120 AB (2025)</span>
+            <div class="hero-athlete-stage" id="heroStage">
+              <img class="athlete-photo" id="heroPhoto" src="assets/img/athletes/hero-stage-padilla.png" alt="Yairo Padilla" />
+              <div class="hero-athlete-chips" id="heroChips">
+                <span class="hero-chip"><span class="chip-dot"></span>#16 Cardinals prospect</span>
+                <span class="hero-chip"><span class="chip-dot"></span>24 SB in 38 G (2025)</span>
                 <span class="hero-chip"><span class="chip-dot"></span>.396 OBP (2025)</span>
               </div>
-              <div class="hero-elite-card">
-                <div class="elite-label">Elite Athlete</div>
-                <div class="elite-name">Yairo<br />Padilla</div>
-                <div class="elite-meta">St. Louis Cardinals · SS · Rookie</div>
-                <div class="elite-panel">Has been compared to <strong>Elly De La Cruz</strong> and <strong>Fernando Tatis Jr.</strong></div>
+              <div class="hero-elite-card" id="heroElite">
+                <div class="elite-label status-elite-athlete" id="heroStatus">Elite Athlete</div>
+                <div class="elite-name" id="heroName">Yairo<br />Padilla</div>
+                <div class="elite-meta" id="heroMeta">St. Louis Cardinals · SS · Rookie</div>
+                <div class="elite-panel" id="heroPanel">Has been compared to <strong>Elly De La Cruz</strong> and <strong>Fernando Tatis Jr.</strong></div>
               </div>
+              <div class="hero-carousel-dots" id="heroDots" aria-label="Select athlete"></div>
               <div class="hero-carousel-controls">
-                <button type="button" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
-                <button type="button" class="active" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+                <button type="button" id="heroPrev" aria-label="Previous athlete"><i class="bi bi-chevron-left"></i></button>
+                <button type="button" id="heroNext" class="active" aria-label="Next athlete"><i class="bi bi-chevron-right"></i></button>
               </div>
             </div>
           </div>
