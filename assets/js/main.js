@@ -32,7 +32,7 @@
   if (heroStage) {
     var ATHLETES = [
       {
-        photo: "assets/img/athletes/hero-stage-padilla.png",
+        photo: "assets/img/athletes/hero-stage-padilla-real.png",
         name: "Yairo<br />Padilla",
         meta: "St. Louis Cardinals · SS · Rookie",
         status: "Elite Athleticism",
