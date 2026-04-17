@@ -162,53 +162,40 @@ body {
   padding: 0.85rem 1.6rem;
 }
 
-/* Navbar — LIGHT theme to match Figma 2026 redesign */
+/* Navbar — DARK theme matching finlete.com exactly */
 .navbar-finlete {
-  background: #fff;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--finlete-border-soft);
+  background: #0a0a0a;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: none;
 }
 
-.navbar-finlete.navbar-dark { color: var(--finlete-ink); }
+.navbar-finlete.navbar-dark { color: #fff; }
 
 .navbar-finlete .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  color: var(--finlete-ink);
-}
-
-.navbar-finlete .navbar-brand img {
-  height: 22px;
-  width: auto;
-}
-
-.navbar-finlete .navbar-brand-text {
-  font-family: "Archivo", sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.01em;
-  color: var(--finlete-ink);
-  font-size: 1.1rem;
-  line-height: 1;
+  color: #fff;
+  padding: 0;
 }
 
 .nav-f-icon {
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
   display: block;
 }
 
 .navbar-finlete .navbar-toggler {
-  border-color: var(--finlete-border-soft);
+  border-color: rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 0.5rem;
 }
 
 .navbar-finlete .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(12,10,9,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-finlete .nav-link {
-  color: var(--finlete-ink);
+  color: #fff;
   font-weight: 500;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
@@ -221,17 +208,19 @@ body {
 }
 
 .nav-signin {
-  background: var(--finlete-green);
-  color: #fff !important;
-  padding: 0.5rem 1.2rem !important;
+  background: #fff;
+  color: #0a0a0a !important;
+  padding: 0.55rem 1.4rem !important;
   border-radius: 999px;
   font-weight: 700 !important;
   margin-left: 0.5rem;
+  font-size: 0.95rem !important;
+  transition: background 0.15s ease;
 }
 
 .nav-signin:hover {
-  background: var(--finlete-green-dark);
-  color: #fff !important;
+  background: #e5e5e5;
+  color: #0a0a0a !important;
 }
 
 /* =========================================================
@@ -291,17 +280,17 @@ body {
 }
 
 .hero-light .active-users-pill .au-avatars .au-avatar {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 2.5px solid #fff;
+  border: 2px solid #fff;
   background: var(--finlete-bg-default);
-  margin-left: -12px;
+  margin-left: -10px;
   overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 800;
   color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -312,15 +301,16 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
-  filter: grayscale(100%) brightness(1.05) contrast(1.05);
+  object-position: center 18%;
+  filter: grayscale(60%) brightness(1.02);
 }
 
 .hero-light .active-users-pill .au-avatars .au-avatar-count {
-  background: var(--finlete-ink);
+  background: #a1a1aa;
   color: #fff;
   font-family: "Archivo", sans-serif;
   letter-spacing: -0.02em;
+  font-size: 0.7rem;
 }
 
 .hero-light .active-users-pill .au-avatars .au-avatar:first-child {
