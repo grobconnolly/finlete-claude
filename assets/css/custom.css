@@ -408,16 +408,15 @@ body {
   flex-shrink: 0;
 }
 
-/* Hero athlete showcase (right column) — uses a real Framer CDN image
-   at 1200x1619 aspect ratio (1:1.35). Image has athlete + stripes +
-   green wedge baked in on transparent background. Chips + ELITE card
-   overlay on top matching the Figma composition. */
+/* Hero athlete showcase — matches Figma exactly. Uses the real Framer CDN
+   image (1200x1619) with athlete + stripes + green wedge composition
+   baked in. Chips + ELITE card overlay precisely over the green accent
+   areas on the right side. */
 .hero-athlete-stage {
   position: relative;
   width: 100%;
-  max-width: 560px;
+  max-width: 640px;
   aspect-ratio: 1200 / 1619;
-  max-height: 700px;
   background: transparent;
   overflow: visible;
   margin-left: auto;
@@ -426,8 +425,8 @@ body {
 .hero-athlete-stage .athlete-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center center;
   display: block;
   transition: opacity 0.25s ease;
 }
@@ -438,36 +437,37 @@ body {
 
 .hero-athlete-chips {
   position: absolute;
-  top: 12%;
-  right: -2.5rem;
+  top: 22%;
+  right: -2rem;
   z-index: 4;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 1.2rem;
   align-items: flex-end;
 }
 
 @media (max-width: 991px) {
   .hero-athlete-chips {
-    right: 0;
-    align-items: flex-end;
+    right: -0.5rem;
+    gap: 0.8rem;
   }
 }
 
 .hero-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.7rem;
   background: #fff;
-  border: 1px solid var(--finlete-border-soft);
+  border: 1px solid rgba(0, 0, 0, 0.04);
   border-radius: 999px;
-  padding: 0.65rem 1.3rem 0.65rem 0.9rem;
+  padding: 0.75rem 1.35rem 0.75rem 1rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--finlete-ink);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
   white-space: nowrap;
   transition: transform 0.35s ease, opacity 0.35s ease;
+  letter-spacing: -0.005em;
 }
 
 .is-transitioning .hero-chip {
@@ -476,28 +476,28 @@ body {
 }
 
 .hero-chip .chip-dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--finlete-green);
   flex-shrink: 0;
-  box-shadow: 0 0 0 3px rgba(54, 169, 62, 0.15);
+  box-shadow: 0 0 0 3px rgba(54, 169, 62, 0.2);
 }
 
 .hero-elite-card {
   position: absolute;
   right: -1rem;
-  bottom: -1rem;
+  bottom: 8%;
   z-index: 4;
-  width: 58%;
-  min-width: 260px;
-  max-width: 320px;
+  width: 60%;
+  min-width: 280px;
+  max-width: 340px;
   background:
-    linear-gradient(165deg, var(--finlete-green-light) 0%, var(--finlete-green) 55%, var(--finlete-green-dark) 100%);
+    linear-gradient(155deg, #7ec782 0%, var(--finlete-green) 50%, var(--finlete-green-dark) 100%);
   color: #fff;
-  border-radius: 20px;
-  padding: 0 1.5rem 1.5rem 1.5rem;
-  box-shadow: 0 16px 48px -8px rgba(54, 169, 62, 0.4), 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 0 1.75rem 1.75rem 1.75rem;
+  box-shadow: 0 20px 60px -10px rgba(54, 169, 62, 0.45), 0 4px 20px rgba(0, 0, 0, 0.12);
   transition: opacity 0.35s ease, transform 0.35s ease;
   text-align: center;
 }
@@ -517,16 +517,15 @@ body {
 
 .hero-elite-card .elite-label {
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: #fff;
   background: var(--finlete-ink);
-  padding: 0.65rem 1rem;
-  border-radius: 10px;
-  margin: 0 -1.5rem 1.25rem -1.5rem;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  padding: 0.85rem 1rem;
+  margin: 0 -1.75rem 1.4rem -1.75rem;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   text-transform: uppercase;
@@ -544,30 +543,31 @@ body {
 .hero-elite-card .elite-name {
   font-family: "Archivo", sans-serif;
   font-weight: 800;
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-size: clamp(2.2rem, 4vw, 3rem);
   color: #fff;
-  line-height: 0.96;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.65rem;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.85rem;
 }
 
 .hero-elite-card .elite-meta {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.9rem;
-  margin-bottom: 1.2rem;
-  letter-spacing: 0.02em;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
   font-weight: 500;
+  opacity: 0.95;
 }
 
 .hero-elite-card .elite-panel {
   background: #fff;
   color: var(--finlete-ink);
-  border-radius: 12px;
-  padding: 0.85rem 1rem;
-  font-size: 0.82rem;
-  line-height: 1.5;
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
 }
 
 .hero-elite-card .elite-panel strong {
@@ -589,18 +589,18 @@ body {
 }
 
 .hero-carousel-controls button {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 999px;
-  background: #fff;
-  border: 1.5px solid var(--finlete-border-default);
+  background: transparent;
+  border: 1.5px solid rgba(12, 10, 9, 0.15);
   color: var(--finlete-ink);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .hero-carousel-controls button:hover {
